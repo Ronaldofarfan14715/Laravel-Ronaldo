@@ -15,15 +15,8 @@ Route::get('/usuarios/{id}','UserController@show')
 
 Route::get('/usuarios/nuevo', 'UserController@create');
 
-Route::get('/saludo/{name}/{nickname?}', function($name,$nickname= null){
+Route::get('/saludo/{name}','BienvenidoUserController@UserName');
 
+Route::get('/saludo/{name}/{nickname?}','BienvenidoUserController@UserNickName');
 
-    $name = ucfirst($name);
-
-    if($nickname){
-        return "Bienvenido {$name} tu apodo es {$nickname}";
-    }else{
-        
-        return "Bienvenido {$name}";
-    }
-});
+Route::get('/usuarios/{id}/edit','UserController@edit')->where('id','[0-9]+');

@@ -50,6 +50,12 @@ class UserModuleTest extends TestCase
             ->assertSee('Bienvenido Ronaldo');
     }
 
+    function prueba_carga_usuario_editar(){
+        $this->get('/saludo/5/edit')
+            ->assertStatus(200)
+            ->assertSee('Usuario 5 esta editando');
+    }
+
 
     
 }
