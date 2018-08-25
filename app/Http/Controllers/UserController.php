@@ -34,7 +34,7 @@ class UserController extends Controller
 
          //Compact crea un array asociativo con variables y sus valores.
 
-        return view('users', compact('title','users'));
+        return view('users.index', compact('title','users'));
 
         //SEGUNDA FORMA 
 
@@ -47,7 +47,9 @@ class UserController extends Controller
 
     public function show($id){
 
-        return "Mostrando el detalle del usuario {$id}";
+      
+
+        return view('users.show', compact('id'));
 
     }
 

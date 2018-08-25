@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <title>@yield('title')- Styde.net</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -51,7 +51,26 @@
     <!-- Begin page content -->
     <main role="main" class="container">
 
-        @yield('contenido')
+        <div class="row mt-3">
+            <div class="col-8">
+                
+                    @yield('contenido')
+    
+            </div>
+    
+            <div class="col-4">
+
+                    @section('sidebar')
+    
+                    <h2>Barra Lateral</h2>
+                    <p>hola</p>
+    
+                    @show
+            </div>
+    
+        </div>
+
+      
 
     </main>
 
