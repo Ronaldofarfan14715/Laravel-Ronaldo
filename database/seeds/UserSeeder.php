@@ -12,14 +12,18 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
+        $profession =  DB::select('SELECT id FROM professions WHERE title="Desarrollador Back-end"');
+
+        dd($profession);
+
         DB::table('users')->insert([
 
             'name' => 'Ronaldo Farfan',
             'email' => 'ronaldo@gmail.com',
             'password' => bcrypt('laravel'),
             
-
+            
         ]);
     }
 }

@@ -11,14 +11,21 @@ class ProfessionSeeder extends Seeder
      */
     public function run()
     {
+
+       /*  DB::insert('INSERT INTO professions (title) VALUES (:title)',[
+            'title'=>'Desarrolador Back-end',
+
+            
+            
+        ]); */
         
         
         DB::table('professions')->insert([
-            'title' => 'Desarollor Back-end'
+            'title' => 'Desarrollador Back-end'
         ]);
 
         DB::table('professions')->insert([
-            'title' => 'Desarollor Front-end'
+            'title' => 'Desarrollador Front-end'
         ]);
 
         DB::table('professions')->insert([
