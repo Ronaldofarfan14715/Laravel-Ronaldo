@@ -19,7 +19,8 @@ class ProfessionSeeder extends Seeder
             
         ]); */
         
-        
+       
+
         DB::table('professions')->insert([
             'title' => 'Desarrollador Back-end'
         ]);
@@ -31,6 +32,8 @@ class ProfessionSeeder extends Seeder
         DB::table('professions')->insert([
             'title' => 'Diseñaro Web '
         ]);
+
+        
 
     }
 }
