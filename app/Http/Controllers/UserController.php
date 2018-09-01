@@ -3,25 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
     public function index(){
 
 
-        if(request()->has('empty')){
-            $users = [];
-        }else{
-            $users=[
-                'Joel',
-                'Ellie',
-                'Tess','Tommy',
-                'Bill',
-                
-            ];
+        
+        $users = DB::table('Users')->get();
 
-        }
-
+        //dd($users);
 
         
 
